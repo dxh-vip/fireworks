@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, user-scalable=no"
+	/>
+	<title></title>
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000;
+		}
+
+		.title {
+			color: #fff;
+			text-align: center;
+			font-size: 28px;
+			margin-top: 50px;
+		}
+
+		.wp {
+			content: '';
+			display: block;
+			width: 240px;
+			height: 240px;
+			overflow: hidden;
+			background-color: #4ac4f0;
+			border-radius: 50%;
+		}
+
+		.circle {
+			width: 400px;
+			margin-top: -220px;
+			margin-left: -80px;
+			height: 400px;
+			transform-origin: 49% 47%;
+			border-radius: 50%;
+			background-color: #fff;
+			animation: 3s rotate linear infinite;
+		}
+
+		.circle::after {
+			content: '';
+			display: block;
+			width: 400px;
+			height: 400px;
+			transform-origin: 49% 47%;
+			border-radius: 50%;
+			background-color: #fff;
+			animation: 3s rotate linear infinite;
+			margin-left: 10px;
+			opacity: 0.7;
+		}
+
+		.boat {
+			position: absolute;
+			height: 80px;
+			width: 80px;
+			left: 88px;
+			z-index: 1;
+			top: 113px;
+			animation: 3s float linear infinite;
+		}
+
+		.container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		@keyframes rotate {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes float {
+			0% {
+				top: 110px;
+				transform: rotate(-10deg);
+			}
+			50% {
+				top: 80px;
+				transform: rotate(10deg);
+			}
+			100% {
+				top: 110px;
+				transform: rotate(-10deg);
+
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="title">浪花loading</div>
+	<div class="container">
+		<div class="wp">
+			<img class="boat" src="https://image.flaticon.com/icons/svg/146/146267.svg" alt="">
+			<div class="circle"></div>
+		</div>
+	</div>
+</body>
+
+</html>
